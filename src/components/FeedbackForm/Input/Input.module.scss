@@ -1,0 +1,14 @@
+.input__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.input__styles {
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: inherit;
+}

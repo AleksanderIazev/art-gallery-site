@@ -1,0 +1,28 @@
+.visible {
+  display: block !important;
+}
+
+.description__inner {
+  text-align: center;
+  display: none;
+}
+
+.description__head {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+.description__about {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 728px) {
+  .description__inner {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 680px) {
+  .description__inner {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,48 @@
+.footer {
+  background-color: #18181b;
+  height: 80px;
+  display: flex;
+}
+
+.container {
+  width: 1220px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy,
+.location {
+  color: white;
+}
+
+.location {
+  padding-left: 150px;
+}
+
+@media (max-width: 670px) {
+  .location {
+    padding-left: 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  .location {
+    font-size: 13px;
+    padding-left: 15px;
+  }
+  .copy {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 345px) {
+  .location {
+    font-size: 11px;
+  }
+  .copy {
+    font-size: 11px;
+  }
+}

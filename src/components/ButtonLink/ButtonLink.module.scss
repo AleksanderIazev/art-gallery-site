@@ -1,0 +1,23 @@
+.btn_link__style {
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 500;
+  color: #0c0a09;
+  height: 80px;
+  min-width: 280px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: #52525b;
+    color: #f4f4f5;
+  }
+}
+
+.active {
+  background-color: #52525b;
+  color: #f4f4f5;
+}

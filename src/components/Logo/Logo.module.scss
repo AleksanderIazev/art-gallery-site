@@ -1,0 +1,15 @@
+.logo {
+  cursor: pointer;
+  color: white;
+  &__link {
+    font-weight: bold;
+    text-transform: uppercase;
+    em {
+      color: #f7c552;
+      font-size: 28px;
+    }
+    span {
+      font-size: 21px;
+    }
+  }
+}

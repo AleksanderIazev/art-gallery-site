@@ -1,0 +1,92 @@
+.nav_toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 1000;
+}
+
+.nav_toggle_opacity {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0px;
+  z-index: 1000;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background: #fff;
+}
+
+.menu_toggle_btn {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.ul_toggle,
+.li_toggle {
+  margin: 0;
+  padding: 0;
+}
+
+.ul_toggle {
+  padding: 50px;
+  position: absolute;
+  left: 30px;
+  top: 100px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ul_toggle_opacity {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 230px;
+  display: none;
+}
+
+.li_toggle {
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

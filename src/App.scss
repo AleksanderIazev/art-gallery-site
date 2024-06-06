@@ -1,0 +1,14 @@
+.App {
+  background: url(./assets/images/background6.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media (max-width: 480px) {
+  .App {
+    background: url(./assets/images/background1.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: 600px 800px;
+  }
+}

@@ -1,0 +1,24 @@
+.language_toggle {
+  display: flex;
+  width: 80px;
+}
+
+.language_toggle button {
+  font-size: 16px;
+  margin: 0 10px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1.1px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language_toggle button:hover {
+  background-color: #f0f0f0;
+  opacity: 0.8;
+}
