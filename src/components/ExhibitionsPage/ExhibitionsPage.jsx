@@ -59,8 +59,8 @@ export const ExhibitionsPage = () => {
               onClick={() => handleButtonLinkClick(0)}
               isActive={selectedExhibition === 0}
             >
-              <p>{t('nameExhibitions1')}</p>
-              <p>{t('month1')}</p>
+              <p>{t('nameExhibitions5')}</p>
+              <p>{t('month4')}</p>
             </ButtonLink>
             <ButtonLink
               variants={buttonAnimation}
@@ -68,9 +68,8 @@ export const ExhibitionsPage = () => {
               onClick={() => handleButtonLinkClick(1)}
               isActive={selectedExhibition === 1}
             >
-              <p>{t('nameExhibitions2par1')}</p>
-              <p>{t('nameExhibitions2par2')}</p>
-              <p>{t('month1')}</p>
+              <p>{t('nameExhibitions6')}</p>      
+              <p>{t('month5')}</p>
             </ButtonLink>
             <ButtonLink
               variants={buttonAnimation}
@@ -78,15 +77,32 @@ export const ExhibitionsPage = () => {
               onClick={() => handleButtonLinkClick(2)}
               isActive={selectedExhibition === 2}
             >
-              <p>{t('nameExhibitions2par1')}</p>
-              <p>{t('nameExhibitions3')}</p>
-              <p>{t('month2')}</p>
+              <p>{t('nameExhibitions2')}</p>
+              <p>{t('month1')}</p>
             </ButtonLink>
             <ButtonLink
               variants={buttonAnimation}
               custom={4}
               onClick={() => handleButtonLinkClick(3)}
               isActive={selectedExhibition === 3}
+            >
+              <p>{t('nameExhibitions1')}</p>
+              <p>{t('month1')}</p>
+            </ButtonLink>
+            <ButtonLink
+              variants={buttonAnimation}
+              custom={5}
+              onClick={() => handleButtonLinkClick(4)}
+              isActive={selectedExhibition === 4}
+            >
+              <p>{t('nameExhibitions3')}</p>
+              <p>{t('month2')}</p>
+            </ButtonLink>
+            <ButtonLink
+              variants={buttonAnimation}
+              custom={6}
+              onClick={() => handleButtonLinkClick(5)}
+              isActive={selectedExhibition === 5}
             >
               <p>{t('nameExhibitions4')}</p>
               <p>{t('month3')}</p>
@@ -97,31 +113,45 @@ export const ExhibitionsPage = () => {
           <div className={cn(css.description__wrapper)}>
             <ExhibitionDescription
               variants={textAnimation}
-              title={t('nameExhibitions1')}
-              about={t('exhibitionDescription1')}
-              text={t('exhibitionAboutText1')}
+              title={t('nameExhibitions5')}
+              about={t('exhibitionDescription5')}
+              text={t('exhibitionAboutText5')}
               isVisible={selectedExhibition === 0}
             />
             <ExhibitionDescription
               variants={textAnimation}
-              title={t('nameExhibitions2par2')}
-              about={t('exhibitionDescription2')}
-              text={t('exhibitionAboutText2')}
+              title={t('nameExhibitions6')}
+              about={t('exhibitionDescription6')}
+              text={t('exhibitionAboutText6')}
               isVisible={selectedExhibition === 1}
             />
             <ExhibitionDescription
               variants={textAnimation}
-              title={t('nameExhibitions3')}
-              about={t('exhibitionDescription3')}
-              text={t('exhibitionAboutText3')}
+              title={t('nameExhibitions2')}
+              about={t('exhibitionDescription2')}
+              text={t('exhibitionAboutText2')}
               isVisible={selectedExhibition === 2}
             />
             <ExhibitionDescription
               variants={textAnimation}
-              title={t('noTitleExhibition')}
+              title={t('nameExhibitions1')}
+              about={t('exhibitionDescription1')}
+              text={t('exhibitionAboutText1')}
+              isVisible={selectedExhibition === 3}
+            />
+             <ExhibitionDescription
+              variants={textAnimation}
+              title={t('nameExhibitions3')}
+              about={t('exhibitionDescription3')}
+              text={t('exhibitionAboutText3')}
+              isVisible={selectedExhibition === 4}
+            />
+              <ExhibitionDescription
+              variants={textAnimation}
+              title={t('nameExhibitions7')}
               about={t('exhibitionDescription4')}
               text={t('exhibitionAboutText4')}
-              isVisible={selectedExhibition === 3}
+              isVisible={selectedExhibition === 5}
             />
           </div>
         </div>

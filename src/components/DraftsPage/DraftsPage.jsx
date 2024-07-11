@@ -8,13 +8,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { imagesDraft } from './importDraftsImage';
 import { useEffect, useState } from 'react';
-import { GalleryPopup } from '../GalleryPage/GalleryPopup/GalleryPopup';
+import { GalleryPopup, GalleryPopup2 } from '../GalleryPage/GalleryPopup/GalleryPopup';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 export const DraftsPage = () => {
   const [isPopUpOpen, setPopUpOpen] = useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);  
   const [slidesPerView, setSlidesPerView] = useState(5);
   const [spaceBetween, setSpaceBetween] = useState(50);
   const { t } = useTranslation();
@@ -56,7 +56,7 @@ export const DraftsPage = () => {
       id="drafts"
       className={cn(css.draft)}
       initial="hidden"
-      whileInView="visible"
+      whileInView="visible"      
       viewport={{ amount: 0.3 }}
     >
       <p className={cn(css.draft__title)}>{t('studenWorks')}</p>
@@ -85,10 +85,10 @@ export const DraftsPage = () => {
         </Swiper>
       </div>
       {isPopUpOpen && (
-        <GalleryPopup
+        <GalleryPopup2
           closePopUp={closePopUp}
           selectedImageIndex={selectedImageIndex}
-          images={imagesDraft}
+          images={imagesDraft}         
         />
       )}
     </motion.div>

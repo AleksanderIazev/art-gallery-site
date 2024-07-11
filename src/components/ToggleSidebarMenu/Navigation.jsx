@@ -13,24 +13,26 @@ const variants = {
   },
 };
 
+
+
 // eslint-disable-next-line react/prop-types
-export const Navigation = ({ isOpen, t }) => (
+export const Navigation = ({ isOpen, t, toggleMenu }) => (
   <motion.ul
     className={cn({
       [css.ul_toggle]: isOpen,
       [css.ul_toggle_opacity]: !isOpen,
     })}
-    variants={variants}
+    variants={variants}  
   >
     <motion.li
       className={cn(css.li_toggle)}
       variants={variants}
       whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 0.95 }}       
     >
-      <Link to="hero" spy={true} smooth={true} offset={0} duration={200}>
-        {t('main')}
-      </Link>
+      <Link to="hero" spy={true} smooth={true} offset={0} duration={200} onClick={toggleMenu}>
+        {t('main') }        
+      </Link> 
     </motion.li>
     <motion.li
       className={cn(css.li_toggle)}
@@ -38,7 +40,7 @@ export const Navigation = ({ isOpen, t }) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <Link to="gallery" spy={true} smooth={true} offset={30} duration={200}>
+      <Link to="gallery" spy={true} smooth={true} offset={30} duration={200} onClick={toggleMenu}>
         {t('gallery')}
       </Link>
     </motion.li>
@@ -48,7 +50,7 @@ export const Navigation = ({ isOpen, t }) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <Link to="about" spy={true} smooth={true} offset={-250} duration={200}>
+      <Link to="about" spy={true} smooth={true} offset={-250} duration={200} onClick={toggleMenu}>
         {t('aboutMe')}
       </Link>
     </motion.li>
@@ -64,6 +66,7 @@ export const Navigation = ({ isOpen, t }) => (
         smooth={true}
         offset={-250}
         duration={200}
+        onClick={toggleMenu}
       >
         {t('exhibitions')}
       </Link>
@@ -73,8 +76,9 @@ export const Navigation = ({ isOpen, t }) => (
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      
     >
-      <Link to="drafts" spy={true} smooth={true} offset={-250} duration={200}>
+      <Link to="drafts" spy={true} smooth={true} offset={-250} duration={200} onClick={toggleMenu}>
         {t('studenWorks')}
       </Link>
     </motion.li>
@@ -84,7 +88,7 @@ export const Navigation = ({ isOpen, t }) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <Link to="contacts" spy={true} smooth={true} offset={30} duration={200}>
+      <Link to="contacts" spy={true} smooth={true} offset={30} duration={200} onClick={toggleMenu}>
         {t('contacts')}
       </Link>
     </motion.li>

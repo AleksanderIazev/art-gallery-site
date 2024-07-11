@@ -38,6 +38,10 @@ export const Example = () => {
   const { setIsToggleOpen } = useContext(ToggleContext);
   const { t } = useTranslation();
 
+  const toggleMenu = () => {
+    toggleOpen((prev) => !prev);
+  };
+
   return (
     <motion.nav
       className={cn({
@@ -46,15 +50,15 @@ export const Example = () => {
       })}
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
-      custom={height}
-      ref={containerRef}
+      custom={height}     
+      ref={containerRef}          
     >
-      <motion.div className={cn(css.background)} variants={sidebar} />
-      <Navigation isOpen={isOpen} t={t} />
+      <motion.div className={cn(css.background)} variants={sidebar}/>
+      <Navigation isOpen={isOpen} t={t} toggleMenu={toggleMenu} />      
       <MenuToggle
         toggle={() => {
           setIsToggleOpen(!isOpen);
-          toggleOpen();
+          toggleOpen();                  
         }}
       />
     </motion.nav>

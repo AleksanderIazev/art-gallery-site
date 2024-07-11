@@ -6,32 +6,39 @@ import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 
+
 // eslint-disable-next-line react/prop-types
 export const FeedbackForm = ({ toggleFeedback }) => {
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
   const [text, setText] = useState('');
-  const { t } = useTranslation();
+  const { t } = useTranslation();   
+  const form = useRef(); 
+  const [buttonText, setButtonText] = useState(t('feedbackFormBtnText'));
+  const handleClick =() => {
+    setButtonText(t('feedbackFormBtnText2'))
+    setTimeout(() => setButtonText(t('feedbackFormBtnText')), [1000])}
+  
 
-  const form = useRef();
-
-  const clearForm = () => {
+  const clearForm = () => {    
     setName('');
     setMail('');
-    setText('');
-  };
+    setText('');  
+     };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_4b3sr6g', 'template_nf2vhye', form.current, {
-        publicKey: 'k-mTomHwlCewToLe5',
+      .sendForm('service_hfeycx2', 'template_993n4ln', form.current, {
+        publicKey: 'tibustdotw44oqZdD',
       })
       .then(
-        (result) => {
-          console.log(result.text);
-          clearForm();
+        (result) => {          
+          console.log(result.text);                   
+          clearForm();        
+
+
         },
         (error) => {
           console.log(error.text);
@@ -63,7 +70,7 @@ export const FeedbackForm = ({ toggleFeedback }) => {
         >
           <Input
             id="firstName"
-            label="First Name"
+            label={t('feedbackLabelName')}
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
@@ -72,7 +79,7 @@ export const FeedbackForm = ({ toggleFeedback }) => {
           />
           <Input
             id="email"
-            label="Email Address"
+            label={t('feedbackLabelEmail')}
             value={mail}
             onChange={(e) => setMail(e.target.value)}
             type="email"
@@ -86,7 +93,9 @@ export const FeedbackForm = ({ toggleFeedback }) => {
             placeholder={t('feedbackFormText')}
             className={cn(css.textarea__styles)}
           ></textarea>
-          <Button type="submit">{t('feedbackFormBtnText')}</Button>
+          <Button          
+           type="submit" onClick={handleClick}>{buttonText}                                   
+          </Button>          
         </form>
       </div>
     </div>

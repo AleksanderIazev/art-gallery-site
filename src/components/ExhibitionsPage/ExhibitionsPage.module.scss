@@ -1,5 +1,5 @@
 .exhibition {
-  background-color: #18181b;
+  background-color: #031d25;
 }
 
 .container {
@@ -13,13 +13,18 @@
 
 .exhibition__links {
   text-align: center;
-  min-width: 400px;
+  min-width: 400px;  
 }
 .exhibition__description {
   color: #fff;
-  padding: 0 20px;
+  padding: 0 25px;
   display: flex;
 }
+
+.description__wrapper h4{
+  color: #119680;
+}
+
 
 .link__wrapper {
   display: flex;
@@ -32,7 +37,7 @@
 .link__header {
   padding-top: 25px;
   font-size: 20px;
-  color: #fff;
+  color: #b2b6be;
 }
 
 @media (max-width: 680px) {

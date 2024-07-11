@@ -8,7 +8,7 @@ const Path = (props) => (
     strokeWidth="3"
     stroke="hsl(0, 0%, 18%)"
     strokeLinecap="round"
-    {...props}
+    {...props}  
   />
 );
 

@@ -17,7 +17,7 @@ export const AboutPage = () => {
           <span className={cn(css.about__link_head)}>{t('aboutMe')}</span>
           <p>{t('aboutMeLinkDescr1')}</p>
           <p className={cn(css.about__link_descr)}>{t('aboutMeLinkDescr2')}</p>
-
+          <br></br>
           <Button
             onClick={() => window.open('https://t.me/alyonaYabl', '_blank')}
           >
